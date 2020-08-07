@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import TwitchAuth from './TwitchAuth'
 import * as serviceWorker from './serviceWorker';
-
+console.log(process.env.REACT_APP_REDIRECT_URI)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TwitchAuth clientId="9zgymms0nexuuqai86o1gkdz31sgp4" redirectUri={process.env.REACT_APP_REDIRECT_URI}>
+      <App />
+    </TwitchAuth>
   </React.StrictMode>,
   document.getElementById('root')
 );

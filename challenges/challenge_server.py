@@ -12,7 +12,7 @@ def challenges():
         return resp
 
     data = DataInterface()
-    resp = make_response({"data": data.list_challenges()}, 200)
+    resp = make_response(json.dumps({"data": data.list_challenges()}), 200)
     resp.headers['Access-Control-Allow-Origin'] = "*"
     return resp
     

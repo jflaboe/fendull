@@ -30,7 +30,7 @@ def add_challenge():
 
     data = DataInterface()
     data.add_challenge(name, points, path)
-    resp = make_response("Success, 200)
+    resp = make_response("Success", 200)
     resp.headers['Access-Control-Allow-Origin'] = "*"
     return resp
 
